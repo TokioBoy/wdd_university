@@ -1,0 +1,194 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;700&display=swap');
+
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+/* * - задаёт значения для всей страницы */
+
+html {
+    font-family: Ubuntu,sans-serif;
+    /* Первый шрифт установленный нами , второй - системный , если с первым что-то произойдет - загрузиться второй и будет не так больно */
+    font-size: 18px;
+    line-height: 1.5;
+    /* Делает разницу по высоте между строчками */
+}
+
+@media (max-width: 600px) {
+    html {
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 420px) {
+    html {
+        font-size: 12px;
+    }
+}
+
+
+header {
+    background-color: #333;
+    height: 100vh;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+section{
+    height: 100vh;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+    /* делает фон движемым */
+    display: flex;
+    align-items: center;
+    justify-content:center;
+}
+
+#spring {
+    background-image: url(media/spring.jpg);
+}
+
+#summer {
+    background-image: url(media/summer.jpg);
+}
+
+#autumn {
+    background-image: url(media/autumn.jpg);
+}
+
+#winter {
+    background-image: url(media/winter.jpg);
+}
+
+h1 {
+    text-align: center;
+    font-size: 2.8rem;
+    text-transform: uppercase;
+    letter-spacing: 6px;
+    color: #7FFFD4
+}
+
+footer {
+    background-color: #333;
+    padding: 4rem;
+}
+
+footer ul {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+}
+
+footer li {
+    margin: 1rem;
+}
+
+footer img {
+    display: block;
+    width: 4rem;
+    height: 4rem;
+    transition: all 0.3s;
+}
+
+footer a:hover img {
+    transform: scale(1.3);
+
+}
+
+#orbit {
+    height: 300px;
+    width: 300px;
+    border: 1px solid #555;
+    position: relative;
+    border-radius: 50%;
+    /* animation-name: spin;
+    animation-duration: 24s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite; */
+    animation: spin 24s linear infinite;
+}
+
+#sun {
+    height: 60px;
+    width: 60px;
+    background-color: #FC0;
+    position: absolute;
+    /* Ставит предмет выше всего по статусу */
+    top: 120px;
+    left: 120px;
+    border-radius: 50%;
+}
+
+#earth {
+    width: 29px;
+    height: 29px;
+    background-color: #00baff;
+    position: absolute;
+    left: 16px;
+    top: 164px;
+    border-radius: 50%;
+    /* animation-name: spin;
+    animation-duration: 2s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite; */
+    /* Это же , но сокращенно ниже */
+    animation: spin 2s linear infinite;
+}
+
+#moon {
+    width: 12px;
+    height: 12px;
+    background-color: #999;
+    position: absolute;
+    left: 8px;
+    top: -28px;
+    border-radius: 50%;
+    /* animation-name: spin;
+    animation-duration: 0.3s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite; */
+    animation: spin 2s linear infinite;
+}
+
+@keyframes spin {
+    /* 0% {
+
+    }
+    50% {
+
+    } */
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+article {
+    max-width: 800px;
+    background-color: rgba(0,0,0,0.5);
+    color: #fff;
+    padding: 2rem;
+    border-radius: 8px;
+    margin: 1rem;
+    transform: translate(0, 10rem);
+    opacity: 0;
+    transition: all 1s;
+}
+
+article.inviewport {
+    transform: translate(0, 0rem);
+    opacity: 1;
+}
+
+h2 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    line-height: 1;
+    letter-spacing: -1px;
+    color: rgba(255,255,255,0.5);
+}
