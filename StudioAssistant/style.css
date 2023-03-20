@@ -1,0 +1,43 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+html {
+  font-size: 14px;
+}
+
+body {
+  background-color:#202838;
+  margin: 2rem;
+}
+
+header {
+  outline: 1px solid whitesmoke;
+  margin-bottom: 2rem;
+}
+
+
+
+    #grid {
+        display: grid;
+        grid-template-columns: 20rem 2fr;
+        gap: 2rem;
+    }
+
+
+
+  main>div {
+    outline: 1px solid aquamarine;
+  }
+
+
+
+
+  @media (max-width: 960px){
+    #grid {
+        grid-template-columns: 1fr;
+    }
+  }
+
