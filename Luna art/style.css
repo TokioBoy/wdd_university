@@ -358,3 +358,20 @@ nav.open {
    color: #fff;
    text-align: center;
 }
+
+#studio {
+   height: 100vh;
+}
+
+#marker {
+   width: 64px;
+   height: 64px;
+   background-image: url(media/9101314.png);
+   background-size: cover;
+   cursor: pointer;
+}
+
+
+#contact {
+   background-color: white;
+}
