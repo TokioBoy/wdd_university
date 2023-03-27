@@ -109,7 +109,7 @@ section {
     display: grid;
     grid-template-columns: repeat(4 , 1fr);
     grid-auto-rows: 1fr;
-    max-width: 1400px;
+    max-width: 1200px;
     margin: 0 auto;
     gap: 10px;
   }
@@ -343,6 +343,10 @@ nav.open {
    visibility: visible;
 }
 
+#about {
+   padding-bottom: 0;
+}
+
 
 #about img {
    display: block;
@@ -357,6 +361,8 @@ nav.open {
    font-size: 1.2rem;
    color: #fff;
    text-align: center;
+   max-width: 1200px;
+   margin: 0 auto;
 }
 
 #studio {
@@ -371,7 +377,82 @@ nav.open {
    cursor: pointer;
 }
 
+#form {
+   display: block;
+   /* outline: 1px solid red; */
+   max-width: 1200px;
+   margin: 0 auto;
+}
 
-#contact {
-   background-color: white;
+#form div {
+   margin-bottom: 1rem;
+}
+
+#form label {
+   display: block;
+   color: #fff;
+   text-transform: uppercase;
+   font-weight: 700;
+   color: #888;
+   font-size: 0.8rem;
+}
+
+#email {
+   display: block;
+   font-family: inherit; 
+   /* делает шрифт как у всей страницы */
+   outline: none;
+   width: 100%;
+   font-size: 1.2rem;
+   padding: 1rem;
+}
+
+#email, #message {
+   display: block;
+   font-family: inherit; 
+   outline: none;
+   width: 100%;
+   font-size: 1.2rem;
+   padding: 1rem;
+   color: #fff;
+   background-color: #444;
+   border: 1px solid #888;
+}
+
+#message {
+   height: 12rem;
+   resize: vertical;
+}
+
+::placeholder {
+   color: #888;
+}
+
+#form button {
+   display: block;
+   font-family: inherit;
+   text-transform: uppercase;
+   font-weight: 700;
+   color: #aaa;
+   font-size: 0.8rem;
+   padding: 1rem 2rem;
+   background-color: transparent;
+   border: 1px solid #888;
+   cursor: pointer;
+   transition: all 0.3s;
+}
+
+#form button#submit {
+   background-color: #037317;
+   margin-left: 1rem;
+}
+
+#form button:hover {
+   transform: scale(1.1);
+}
+
+#form div:last-child {
+   margin-top: 2rem;
+   display: flex;
+   justify-content: flex-end;
 }
